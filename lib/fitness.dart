@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Fitness extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    MediaQueryData deviceSize = MediaQuery.of(context);
     return Scaffold(
       backgroundColor:Color(0xffC9E0ED),
        body: SafeArea(
@@ -63,7 +64,7 @@ class Fitness extends StatelessWidget {
                    ),
                    ),
                    Container(
-                     width: 120.0,
+                     width: deviceSize.size.width*0.3,
                      decoration: BoxDecoration(
                        borderRadius: BorderRadius.circular(49.0),
                        gradient: LinearGradient(
@@ -100,9 +101,9 @@ class Fitness extends StatelessWidget {
                ),
                SizedBox(height: 50.0,),
                Container(
-                 margin: EdgeInsets.symmetric(horizontal: 30.0),
+                 margin: EdgeInsets.symmetric(horizontal: deviceSize.size.width*0.070),
                  width: double.infinity,
-                 height: 160.0,
+                 height: deviceSize.size.height*0.18,
                  decoration: BoxDecoration(
                      borderRadius: BorderRadius.circular(
                          20.0),
@@ -129,12 +130,40 @@ class Fitness extends StatelessWidget {
                        ),
                      ]
                  ),
-                 child: MaterialButton()
+                 child: Container(
+                   child: Column(
+                     mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                     children: [
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceAround,
+                         children: [
+                           Text("Rounds"),
+                           Text("4"),
+                         ],
+                       ),
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceAround,
+                         children: [
+                           Text(" Time"),
+                           Text("30min"),
+                         ],
+                       ),
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceAround,
+                         children: [
+                           Text("Intensity"),
+                          
+                         ],
+                       )
+                     ],
+                   ),
+                 )
                ),
                Container(
                    margin: EdgeInsets.only(top: 50.0,left: 5.0,right: 5.0),
                    width: double.infinity,
-                   height: 405.0,
+                   height: deviceSize.size.height*0.46,
                    decoration: BoxDecoration(
                        borderRadius: BorderRadius.circular(
                            20.0),
