@@ -136,14 +136,14 @@ class Fitness extends StatelessWidget {
 
                      children: [
                        Row(
-                         mainAxisAlignment: MainAxisAlignment.spaceAround,
+                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                          children: [
                            Text("Rounds"),
                            Text("4"),
                          ],
                        ),
                        Row(
-                         mainAxisAlignment: MainAxisAlignment.spaceAround,
+                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                          children: [
                            Text(" Time"),
                            Text("30min"),
@@ -153,6 +153,45 @@ class Fitness extends StatelessWidget {
                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                          children: [
                            Text("Intensity"),
+                           Container(
+                             width: deviceSize.size.width*0.30,
+                             height: deviceSize.size.height*0.02,
+                             decoration: BoxDecoration(
+                               borderRadius: BorderRadius.circular(50.0),
+                               color: Color(0xffD2E5F1),
+                               boxShadow: [
+                                 BoxShadow(
+                                   offset: Offset(-8.0, -8.0),
+                                   color: Color(0xffabb3b9),
+                                   blurRadius: 30,
+                                   spreadRadius: 1.0
+                                 ),
+                                 BoxShadow(
+                                     offset: Offset(8.0, 8.0),
+                                     color: Color(0xffffffff),
+                                     blurRadius: 15.0,
+                                     spreadRadius: 1.0
+                                 )
+                               ]
+                             ),
+                             child: Container(
+                               margin: EdgeInsets.only(top:4,left:2,right: 20,bottom: 4),
+                               decoration: BoxDecoration(
+                                 // color: Colors.red,
+                                 borderRadius: BorderRadius.circular(20.0),
+                                 gradient: LinearGradient(
+                                   begin: Alignment.bottomLeft,
+                                   end: Alignment.topRight,
+                                   colors: [
+                                     Color(0xffF5C77A),
+                                     Color(0xffF4A781)
+                                   ]
+                                 )
+
+                               ),
+                             ),
+
+                           )
                           
                          ],
                        )
