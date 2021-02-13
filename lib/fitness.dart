@@ -1,7 +1,9 @@
 import 'package:fitness_ui_app/fitnessList.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
+// ignore: must_be_immutable
 class Fitness extends StatelessWidget {
 var fit = FitnessData();
   @override
@@ -43,14 +45,16 @@ var fit = FitnessData();
                Row(
                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                  children: [
-                 Icon(Icons.arrow_back,size:50.0,),
+                 IconButton(icon: Icon(Icons.arrow_back),
+                     iconSize: 45.0,
+                     onPressed: ()=>Get.back()),
                  Text("FITNESS",style: TextStyle(
                    fontSize: 30.0,
                    letterSpacing: 10.0,
                  ),),
                    Icon(FontAwesomeIcons.user )
                ],),
-               SizedBox(height:40.0),
+               SizedBox(height:35.0),
                Row(
                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                  children: [
