@@ -113,6 +113,42 @@ class FitnessHome extends StatelessWidget {
 
                   ],
                 ),
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Neumorphic(
+                      style: NeumorphicStyle(
+                          shape: NeumorphicShape.convex,
+                          boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(150)),
+                          depth: 5,
+                          intensity: 10,
+
+                          lightSource: LightSource.topLeft,
+                          color: Color(0xffE4EFFA)),
+                      child: Container(
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                    Neumorphic(
+                      style: NeumorphicStyle(
+                          shape: NeumorphicShape.concave,
+                          boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(150)),
+                          depth: 4,
+
+                          color: Color(0xffD8E9F4)),
+                      child: Container(
+
+                        width: 150,
+                        height: 150,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                            child: ,
+                      ),
+                    ),
+
+                  ],
+                )
               ],
             ),
           ),
